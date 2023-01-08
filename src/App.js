@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {Routes, Route, useNavigate} from 'react-router-dom'
+import Home from "./Home.js"
+import Movies from "./Movies.js"
+
+
+
+
 
 function App() {
+  
+  const navigate = useNavigate()
+  const navigateHome = () => {
+    navigate('/')
+  }
+  const navigateToMovies = () => {
+    navigate('/movies')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="header">
+            <div className="title">BLOCKBUSTER</div>
+            <div>
+                <button onClick={navigateHome}>Home</button>
+                <button onClick={navigateToMovies}>Movies</button>
+            </div>
+        </div>
+
+   
+      <Routes>
+        <Route path="/" element={<Home navigate={navigateToMovies} />  } />
+        <Route path="/Movies" element={<Movies />}  />
+      </Routes>
     </div>
   );
 }

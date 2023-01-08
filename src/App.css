@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+  margin-top: 10%;
+  color: #FFCC00;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home img {
+  height: auto;
+  width: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #1030AD;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.card {
+  border: 2px solid black;
+  width: 240px;
+  height: 420px;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 90%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+  background-color: black;
+  color: #FFCC00;
+}
+
+.movies {
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 100px;
+  gap: 5px;
+  font-size: 1.5rem;
+  
+}
+
+button {
+display: inline-block;
+outline: 0;
+border: none;
+cursor: pointer;
+padding: 0 24px;
+border-radius: 50px;
+min-width: 200px;
+height: 50px;
+font-size: 18px;
+background-color: #fd0;
+font-weight: 500;
+color: #222;
+}
+
+
+.movies button {
+
+  border: 0;
+  outline: 0;
+  cursor: pointer;
   color: white;
+  background-color: rgb(84, 105, 212);
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-block;
+  min-height: 28px;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.movies div {
+  background-color: white;
 }
